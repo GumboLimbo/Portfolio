@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import Layout from '../components/navbar/navbar';
 
-export default function About() {
+export default function Contact() {
     return (
         <>
             <Head>

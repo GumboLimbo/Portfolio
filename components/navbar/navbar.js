@@ -1,22 +1,32 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function updateActive(navigation, setNavigation, itemName) {
-    let newNav = structuredClone(navigation);
-    newNav.forEach((page, index, arr) => {
-        arr[index].current = page.name === itemName
-    });
-    setNavigation(newNav);
-}
+export default function Navbar() {
+  const router = useRouter();
+  const initNav = [
+    { name: 'Home', href: '/', current: router.pathname === '/' },
+    { name: 'About', href: '/about', current: router.pathname === '/about' },
+    { name: 'Contact', href: '/contact', current: router.pathname === '/contact' },
+  ];
 
-export default function Navbar({navigation, setNavigation}) {
+  const [navigation, setNavigation] = useState(initNav);
+
+  useEffect(() => {
+    const updatedNav = navigation.map(item => ({
+      ...item,
+      current: item.href === router.pathname
+    }));
+    setNavigation(updatedNav);
+  }, [router.pathname]);
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -42,7 +52,6 @@ export default function Navbar({navigation, setNavigation}) {
                       <Link
                         key={item.name}
                         href={item.href}
-                        onClick={() => updateActive(navigation, setNavigation, item.name)}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
