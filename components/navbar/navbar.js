@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, Icon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -64,9 +64,27 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <a href="https://github.com/GumboLimbo" target='_blank'
+                    className="relative rounded-full bg-gray-800 p-2 text-gray-400 hover:text-white"
+                >
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">View notifications</span>
+                    <img src="/images/github-mark-white.png" className='h-8 w-8 rounded-full' alt="Github" />
+                </a>
+
+                <a href="https://www.linkedin.com/in/alexander-harker/" target='_blank'
+                    className="relative rounded-full bg-gray-800 p-2 text-gray-400 hover:text-white"
+                >
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">View notifications</span>
+                    <img src="/images/In-White-128@2x.png" className='h-8 w-8 rounded-full' alt="Github" />
+                </a>
+              </div>
             </div>
           </div>
 
+          {/* Mobile menu internals*/}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
