@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, Icon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -28,7 +28,7 @@ export default function Navbar() {
   }, [router.pathname]);
 
   return (
-    <Disclosure as="nav" className="bg-black">
+    <Disclosure as="nav" className="sticky top-0 bg-black">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
