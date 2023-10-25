@@ -1,0 +1,49 @@
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+
+  height: 100%;
+
+  background: hsla(236, 100%, 8%, 1);
+  background: linear-gradient(0deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 14%, 1) 100%);
+  background: -moz-linear-gradient(0deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 14%, 1) 100%);
+  background: -webkit-linear-gradient(0deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 14%, 1) 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  color: #969696;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
