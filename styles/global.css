@@ -27,6 +27,8 @@ body {
   background-position: center center;
   background-attachment: fixed;
 
+  overflow: hidden;
+
   color: #969696;
 }
 

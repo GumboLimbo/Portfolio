@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 
 
 export const NavbarHeight = "64px";
+export const NavbarPaddingTop = `pt-[64px]`;
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

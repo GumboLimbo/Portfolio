@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FadingDiv from '../components/FadingDiv/FadingDiv';
-import { NavbarHeight } from '../components/navbar/navbar';
+import { NavbarHeight, NavbarPaddingTop } from '../components/navbar/navbar';
 
 export default function Home() {
   const experience = [
@@ -11,9 +11,8 @@ export default function Home() {
   ];
 
   return (
-    <div className={`md:snap-y md:snap-mandatory md:max-h-[calc(100vh-${NavbarHeight})] md:min-h-[calc(100vh-${NavbarHeight})] md:overflow-scroll`}>
-      <section className='md:snap-start md:snap-always'>
-        <div className={`md:min-h-[calc(100vh-${NavbarHeight})] md:max-h-[calc(100vh-${NavbarHeight})] bg-gradient-to-br from-gray-700 to-gray-900`}>
+    <div className={`md:snap-y md:snap-mandatory max-h-screen min-h-screen overflow-scroll`}>
+        <section className={`md:snap-start md:snap-always min-h-screen ${NavbarPaddingTop} bg-gradient-to-br from-gray-700 to-gray-900`}>
           <div className='text-center text-white pt-10 max-h-2/6'>
             <FadingDiv duration='duration-[1500ms]'>
               <h1 className='text-6xl mb-5'>Hi! I'm Alex.</h1>
@@ -28,17 +27,15 @@ export default function Home() {
             </FadingDiv>
           </div>
 
-        </div>
       </section>
-      <section className='md:snap-end md:snap-always'>
-        <div className={`min-h-[calc(100vh-${NavbarHeight})] max-h-[calc(100vh-${NavbarHeight})] bg-gradient-to-br from-gray-300 to-gray-100`}>
+      <section className={`md:snap-end md:snap-always ${NavbarPaddingTop} bg-gradient-to-br from-gray-300 to-gray-100 min-h-screen`}>
           <div className='text-center text-black pt-10'>
-            <FadingDiv duration='duration-[1500ms]'>
+            <FadingDiv duration='duration-[2000ms]'>
               <h1 className='text-6xl mb-5'>Experience:</h1>
               <div className='text-xl'>
                 (View <Link href="/resume" className='text-red-600 underline'>Resume</Link> for More Detail)
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-2 justify-center pt-10'>
+              <div className='grid grid-cols-1 md:grid-cols-2 justify-center pt-10 pb-20 md:pb-0'>
                 {experience.map((exp) => (
                   <div className={`transition-all duration-[200ms] ${exp.fromColor} ${exp.toColor} justify-self-center hover:shadow-xl w-11/12 h-5/6 hover:h-[90%] hover:w-[95%] mx-2 my-4 bg-gradient-to-br rounded-md`}>
                     <div className='grid grid-cols-3 min-h-[48px]'>
@@ -61,7 +58,6 @@ export default function Home() {
                 ))}
               </div>
             </FadingDiv>
-          </div>
         </div>
       </section>
     </div>
