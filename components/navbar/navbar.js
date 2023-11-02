@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 
+export const NavbarHeight = "64px";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -15,6 +17,7 @@ export default function Navbar() {
     { name: 'Home', href: '/', current: router.pathname === '/' },
     { name: 'About', href: '/about', current: router.pathname === '/about' },
     { name: 'Contact', href: '/contact', current: router.pathname === '/contact' },
+    { name: 'Resume', href: '/resume', current: router.pathname === '/resume' },
   ];
 
   const [navigation, setNavigation] = useState(initNav);
@@ -66,19 +69,19 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <a href="https://github.com/GumboLimbo" target='_blank'
-                    className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white"
+                  className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white"
                 >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
-                    <img src="/images/github-mark-white.png" className='h-8 w-8 rounded-full' alt="Github" />
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">View notifications</span>
+                  <img src="/images/github-mark-white.png" className='h-8 w-8 rounded-full' alt="Github" />
                 </a>
 
                 <a href="https://www.linkedin.com/in/alexander-harker/" target='_blank'
-                    className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white"
+                  className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white"
                 >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
-                    <img src="/images/In-White-128@2x.png" className='h-8 w-8 rounded-full' alt="Github" />
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">View notifications</span>
+                  <img src="/images/In-White-128@2x.png" className='h-8 w-8 rounded-full' alt="Github" />
                 </a>
               </div>
             </div>

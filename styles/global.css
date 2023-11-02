@@ -22,11 +22,6 @@ body {
 
   height: 100%;
 
-  background: hsla(236, 100%, 8%, 1);
-  background: linear-gradient(0deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 14%, 1) 100%);
-  background: -moz-linear-gradient(0deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 14%, 1) 100%);
-  background: -webkit-linear-gradient(0deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 14%, 1) 100%);
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
