@@ -69,7 +69,7 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <a href="https://github.com/GumboLimbo" target='_blank'
-                  className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white"
+                  className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white hover:bg-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
@@ -77,11 +77,11 @@ export default function Navbar() {
                 </a>
 
                 <a href="https://www.linkedin.com/in/alexander-harker/" target='_blank'
-                  className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white"
+                  className="relative rounded-full bg-inherit p-2 text-gray-400 hover:text-white hover:bg-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  <img src="/images/In-White-128@2x.png" className='h-8 w-8 rounded-full' alt="Github" />
+                  <img src="/images/In-White-128@2x.png" className='h-8 w-8 rounded-full' alt="LinkedIn" />
                 </a>
               </div>
             </div>
