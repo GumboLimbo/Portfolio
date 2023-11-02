@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FadingDiv from '../components/FadingDiv/FadingDiv';
-import { NavbarHeight, NavbarPaddingTop } from '../components/navbar/navbar';
+import { MaxHeightViewMinusNav, MinHeightViewMinusNav, NavbarHeight, NavbarPaddingTop } from '../components/navbar/navbar';
+import Head from 'next/head';
 
 export default function Home() {
   const experience = [
@@ -11,9 +12,13 @@ export default function Home() {
   ];
 
   return (
-    <div className={`md:snap-y md:snap-mandatory max-h-screen min-h-screen overflow-scroll`}>
-        <section className={`md:snap-start md:snap-always min-h-screen ${NavbarPaddingTop} bg-gradient-to-br from-gray-700 to-gray-900`}>
-          <div className='text-center text-white pt-10 max-h-2/6'>
+    <>
+      <Head>
+        <style>{`body {overflow: hidden}`}</style>
+      </Head>
+      <div className={`md:snap-y md:snap-mandatory ${MaxHeightViewMinusNav} ${MinHeightViewMinusNav} overflow-y-scroll`}>
+        <section className={`md:snap-start md:snap-always ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900`}>
+          <div className='pt-4 text-center text-white max-h-2/6'>
             <FadingDiv duration='duration-[1500ms]'>
               <h1 className='text-6xl mb-5'>Hi! I'm Alex.</h1>
             </FadingDiv>
@@ -27,9 +32,9 @@ export default function Home() {
             </FadingDiv>
           </div>
 
-      </section>
-      <section className={`md:snap-end md:snap-always ${NavbarPaddingTop} bg-gradient-to-br from-gray-300 to-gray-100 min-h-screen`}>
-          <div className='text-center text-black pt-10'>
+        </section>
+        <section className={`md:snap-start md:snap-always bg-gradient-to-br from-gray-300 to-gray-100 ${MinHeightViewMinusNav}`}>
+          <div className='pt-4 text-center text-black'>
             <FadingDiv duration='duration-[2000ms]'>
               <h1 className='text-6xl mb-5'>Experience:</h1>
               <div className='text-xl'>
@@ -58,8 +63,9 @@ export default function Home() {
                 ))}
               </div>
             </FadingDiv>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

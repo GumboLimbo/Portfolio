@@ -2,7 +2,7 @@ import { ClipboardIcon, DocumentCheckIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import FadingDiv from '../components/FadingDiv/FadingDiv';
 import SlidingDiv from '../components/SlidingDiv/SlidingDiv';
-import { NavbarHeight } from '../components/navbar/navbar';
+import { MinHeightViewMinusNav } from '../components/navbar/navbar';
 
 export default function Contact() {
     const [copied, setCopied] = useState(false);
@@ -19,7 +19,7 @@ export default function Contact() {
     };
 
     return (
-        <div className={`flex items-center justify-center px-5 min-h-[calc(100vh-${NavbarHeight})] bg-gradient-to-br from-gray-700 to-gray-900`}>
+        <div className={`md:overflow-hidden flex items-center justify-center px-5 ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900`}>
             <div className='text-center text-white pt-10'>
                 <FadingDiv duration='duration-[1500ms]'>
                     <h1 className='text-6xl'>Glad you want to get in touch!</h1>
