@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FadingDiv from '../components/FadingDiv/FadingDiv';
-import { MaxHeightViewMinusNav, MinHeightViewMinusNav, NavbarHeight, NavbarPaddingTop } from '../components/navbar/navbar';
+import { MaxHeightViewMinusNav, MinHeightViewMinusNav } from '../components/navbar/navbar';
 import Head from 'next/head';
 
 export default function Home() {
@@ -42,7 +42,7 @@ export default function Home() {
               </div>
               <div className='grid grid-cols-1 md:grid-cols-2 justify-center pt-10 pb-20 md:pb-0'>
                 {experience.map((exp) => (
-                  <div className={`transition-all duration-[200ms] ${exp.fromColor} ${exp.toColor} justify-self-center hover:shadow-xl w-11/12 h-5/6 hover:h-[90%] hover:w-[95%] mx-2 my-4 bg-gradient-to-br rounded-md`}>
+                  <div className={`transition-all duration-[200ms] ${exp.fromColor} ${exp.toColor} justify-self-center hover:shadow-xl w-11/12 h-5/6 hover:scale-105 hover:scale-105 mx-2 my-4 bg-gradient-to-br rounded-md`}>
                     <div className='grid grid-cols-3 min-h-[48px]'>
                       <a href={exp.github} target='_blank'
                         className="relative rounded-full py-1 px-2 text-gray-400 hover:text-white"
