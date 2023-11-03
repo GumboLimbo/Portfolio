@@ -18,8 +18,8 @@ export default function Home() {
       <Head>
         <style>{`body {overflow: hidden}`}</style>
       </Head>
-      <div className={`md:snap-y md:snap-mandatory ${MaxHeightViewMinusNav} ${MinHeightViewMinusNav} overflow-y-scroll`}>
-        <section className={`md:snap-start md:snap-always ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900`}>
+      <div className={`sm:snap-y sm:snap-mandatory ${MaxHeightViewMinusNav} ${MinHeightViewMinusNav} overflow-y-scroll`}>
+        <section className={`sm:snap-start sm:snap-always ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900`}>
           <div className='pt-4 text-center text-white max-h-2/6'>
             <FadingDiv duration='duration-[1500ms]'>
               <h1 className='text-6xl mb-5'>Hi! I'm Alex.</h1>
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
 
         </section>
-        <section className={`md:snap-start md:snap-always bg-gradient-to-br from-gray-300 to-gray-100 ${MinHeightViewMinusNav}`}>
+        <section className={`sm:snap-start sm:snap-always bg-gradient-to-br from-gray-300 to-gray-100 ${MinHeightViewMinusNav}`}>
           <div className='pt-4 text-center text-black'>
             <FadingDiv duration='duration-[2000ms]'>
               <h1 className='text-6xl mb-5'>Experience:</h1>

@@ -19,12 +19,12 @@ export default function Contact() {
     };
 
     return (
-        <div className={`overflow-x-hidden md:overflow-hidden flex items-center justify-center px-5 ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900 pb-20 md:pb-0`}>
+        <div className={`overflow-x-hidden sm:overflow-hidden flex items-center justify-center px-5 ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900 pb-20 sm:pb-0`}>
             <div className='text-center text-white pt-10'>
                 <FadingDiv duration='duration-[1500ms]'>
                     <h1 className='text-6xl'>Glad you want to get in touch!</h1>
                 </FadingDiv>
-                <div className='md:flex md:justify-center md:items-center mb-2'>
+                <div className='sm:flex sm:justify-center sm:items-center mb-2'>
                     <SlidingDiv delay='delay-[500ms]' duration='duration-[1500ms]'>
                         <h3 className='text-2xl pt-20'>You can reach me at
                             <button onClick={handleCopyEmail} className="bg-black text-gray-300 p-1 hover:text-white hover:bg-gray-800 rounded-md mx-1">
