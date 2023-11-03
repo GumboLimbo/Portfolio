@@ -2,13 +2,15 @@ import Link from 'next/link';
 import FadingDiv from '../components/FadingDiv/FadingDiv';
 import { MaxHeightViewMinusNav, MinHeightViewMinusNav } from '../components/navbar/navbar';
 import Head from 'next/head';
+import ExperienceCard from '../components/Experience/ExperienceCard';
+import ExperienceGrid from '../components/Experience/ExperienceGrid';
 
 export default function Home() {
   const experience = [
-    { name: 'Shade Protocol\'s ShadeSwap', fromColor: "from-purple-300", toColor: "to-purple-500", description: "Researched, built, and managed the audit of a crypto exchange. Successfully managed > $10M. Also built supporting cloud infrastructure and db.", techStack: "Rust, Smart Contracts, AWS, PostgresDB, Terraform, Vue.js, Python", github: "https://github.com/securesecrets/shadeswap", inAction: "https://app.shadeprotocol.io/swap/", paper: "https://arxiv.org/abs/2302.07822" },
-    { name: 'Infinite Campus', fromColor: "from-green-300", toColor: "to-green-500", description: "", techStack: "", github: "", inAction: "", paper: "" },
-    { name: 'This Website', fromColor: "from-gray-300", toColor: "to-gray-500", description: "", techStack: "", github: "", inAction: "", paper: "" },
-    { name: 'Arbitrage Bot', fromColor: "from-yellow-300", toColor: "to-yellow-500", description: "", techStack: "", github: "", inAction: "", paper: "" },
+    { name: 'Shade Protocol\'s ShadeSwap', fromColor: "from-purple-300", toColor: "to-purple-500", description: "Researched, built, and managed the audit of a crypto exchange which successfully managed > $10M. Also built supporting cloud infrastructure and db.", techStack: "Rust, Smart Contracts, AWS, PostgresDB, Terraform, Vue.js, Python", github: "https://github.com/securesecrets/shadeswap", inAction: "https://app.shadeprotocol.io/swap/", paper: "https://arxiv.org/abs/2302.07822" },
+    { name: 'Infinite Campus', fromColor: "from-green-300", toColor: "to-green-500", description: "Upgraded SAML user auth, internal security systems, and UI design in a school information system.", techStack: "Java, XML / XSLT, Angular, SQL", github: "", inAction: "", paper: "" },
+    { name: 'This Website', fromColor: "from-gray-300", toColor: "to-gray-500", description: "My first React project. I like challenging myself with new tech stacks, and I previously only had Angular, Vue.js, and Svelte exposure for FE frameworks.", techStack: "React, Next.js, Vercel", github: "https://github.com/GumboLimbo/Portfolio", inAction: "", paper: "" },
+    { name: 'Arbitrage Bot', fromColor: "from-yellow-300", toColor: "to-yellow-500", description: "Secret Network automated arbitrage trading bot. Still WIP as it's somewhat inefficient, but fully functional.", techStack: "Typescript, SecretJS, Node.js, Yarn", github: "https://github.com/GumboLimbo/arb-public/", inAction: "", paper: "" },
   ];
 
   return (
@@ -40,40 +42,7 @@ export default function Home() {
               <div className='text-xl'>
                 (View <Link href="/resume" className='text-red-600 underline'>Resume</Link> for More Detail)
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-2 justify-center pt-10 pb-20 md:pb-0'>
-                {experience.map((exp) => (
-                  <div className={`transition-all duration-[200ms] ${exp.fromColor} ${exp.toColor} justify-self-center hover:shadow-xl w-11/12 max-h-fit hover:scale-105 hover:scale-105 mx-2 my-4 bg-gradient-to-br rounded-md`}>
-                    <div className='grid grid-cols-3 min-h-[48px]'>
-                      <a href={exp.github} target='_blank'
-                        className="relative rounded-full py-1 px-2 text-gray-400 hover:text-white"
-                      >
-                        <img src="/images/github-mark.png" className='transition-all duration-[200ms] h-8 w-8 hover:h-10 hover:w-10 rounded-full' alt="Github" />
-                      </a>
-                      <div className='text-2xl'>
-                        {exp.name}
-                      </div>
-                      <div className='justify-self-end text-sm'>
-                        {exp.inAction &&
-                          <a href={exp.inAction} target='_blank'
-                            className="flex transition-all duration-[200ms] max-h-min max-w-fit text-center align-items-center rounded-md my-1 mx-2 text-gray-800 hover:text-white hover:bg-purple-800">
-                            See it in action!</a>
-                        }
-                        {exp.paper &&
-                          <a href={exp.paper} target='_blank'
-                            className="flex transition-all duration-[200ms] max-h-min max-w-fit text-center align-items-center rounded-md my-1 mx-2 text-gray-800 hover:text-white hover:bg-purple-800">
-                            Research Paper</a>
-                        }
-                      </div>
-                    </div>
-                    <div className='text-xl'>
-                      {exp.description}
-                    </div>
-                    <div className='text-md border-t border-black mx-5'>
-                      {exp.techStack}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <ExperienceGrid experiences={experience}/>
             </FadingDiv>
           </div>
         </section>

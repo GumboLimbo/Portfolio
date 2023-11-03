@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 
 export const NavbarHeight = "64px";
 export const MinHeightViewMinusNav = "min-h-[calc(100vh-64px)]";
+export const HeightViewMinusNav = "h-[calc(100vh-64px)]";
 export const MaxHeightViewMinusNav = "max-h-[calc(100vh-64px)]";
 export const NavbarPaddingTop = `pt-[64px]`;
 
