@@ -17,7 +17,7 @@ export default function About() {
             </Head>
             <div className={`text-gray-200 px-5 ${MinHeightViewMinusNav} ${HeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900 text-center overflow-y-scroll overflow-x-hidden md:overflow-hidden`}>
                 <div className="pt-5 text-2xl md:text-5xl md:h-[15%]">About me...</div>
-                <div className="md:hidden text-xs">[Tap to read more]</div>
+                <div className="md:hidden text-xs">[Tap an item to read more]</div>
                 <div className="grid grid-cols-1 md:h-[75%] gap-y-5 mt-10 mb-20 md:mb-0">
                     {traits.map((t) => (
                         <HoverText {...t} />
