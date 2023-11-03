@@ -8,9 +8,9 @@ import ExperienceGrid from '../components/Experience/ExperienceGrid';
 export default function Home() {
   const experience = [
     { name: 'Shade Protocol\'s ShadeSwap', fromColor: "from-purple-300", toColor: "to-purple-500", description: "Researched, built, and managed the audit of a crypto exchange which successfully managed > $10M. Also built supporting cloud infrastructure and db.", techStack: "Rust, Smart Contracts, AWS, PostgresDB, Terraform, Vue.js, Python", github: "https://github.com/securesecrets/shadeswap", inAction: "https://app.shadeprotocol.io/swap/", paper: "https://arxiv.org/abs/2302.07822" },
-    { name: 'Infinite Campus', fromColor: "from-green-300", toColor: "to-green-500", description: "", techStack: "", github: "", inAction: "", paper: "" },
-    { name: 'This Website', fromColor: "from-gray-300", toColor: "to-gray-500", description: "", techStack: "", github: "", inAction: "", paper: "" },
-    { name: 'Arbitrage Bot', fromColor: "from-yellow-300", toColor: "to-yellow-500", description: "", techStack: "", github: "", inAction: "", paper: "" },
+    { name: 'Infinite Campus', fromColor: "from-green-300", toColor: "to-green-500", description: "Upgraded SAML user auth, internal security systems, and UI design in a school information system.", techStack: "Java, XML / XSLT, Angular, SQL", github: "", inAction: "", paper: "" },
+    { name: 'This Website', fromColor: "from-gray-300", toColor: "to-gray-500", description: "My first React project. I like challenging myself with new tech stacks, and I previously only had Angular, Vue.js, and Svelte exposure for FE frameworks.", techStack: "React, Next.js, Vercel", github: "https://github.com/GumboLimbo/Portfolio", inAction: "", paper: "" },
+    { name: 'Arbitrage Bot', fromColor: "from-yellow-300", toColor: "to-yellow-500", description: "Secret Network automated arbitrage trading bot. Still WIP as it's somewhat inefficient, but fully functional.", techStack: "Typescript, SecretJS, Node.js, Yarn", github: "https://github.com/GumboLimbo/arb-public/", inAction: "", paper: "" },
   ];
 
   return (
