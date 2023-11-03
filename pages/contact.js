@@ -19,7 +19,7 @@ export default function Contact() {
     };
 
     return (
-        <div className={`overflow-x-hidden md:overflow-hidden flex items-center justify-center px-5 ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900`}>
+        <div className={`overflow-x-hidden md:overflow-hidden flex items-center justify-center px-5 ${MinHeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900 pb-20 md:pb-0`}>
             <div className='text-center text-white pt-10'>
                 <FadingDiv duration='duration-[1500ms]'>
                     <h1 className='text-6xl'>Glad you want to get in touch!</h1>
