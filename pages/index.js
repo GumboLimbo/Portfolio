@@ -23,7 +23,7 @@ export default function Home() {
               <h1 className='text-6xl mb-5'>Hi! I'm Alex.</h1>
             </FadingDiv>
             <FadingDiv delay='delay-[500ms]' duration='duration-[1500ms]'>
-              <h1 className='text-6xl mb-5'>I design and build cool tech.</h1>
+              <h1 className='text-5xl pb-5 bg-gradient-to-br from-yellow-300 to-orange-600 text-transparent bg-clip-text'>I design and build cool tech.</h1>
             </FadingDiv>
           </div>
           <div className='flex justify-center items-center w-full'>
