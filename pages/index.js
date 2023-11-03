@@ -28,7 +28,7 @@ export default function Home() {
           </div>
           <div className='flex justify-center items-center w-full'>
             <FadingDiv delay='delay-1000' duration='duration-[1500ms]'>
-              <img className='max-h-80' src="/images/Headshot-Sm.png" />
+              <img className='max-h-80' src="/images/Headshot-sm.png" />
             </FadingDiv>
           </div>
 
