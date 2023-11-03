@@ -15,9 +15,10 @@ export default function About() {
             <Head>
                 <style>{`body {overflow: hidden}`}</style>
             </Head>
-            <div className={`text-gray-200 px-5 ${MinHeightViewMinusNav} ${HeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900 text-center overflow-y-scroll md:overflow-hidden`}>
-                <div className="pt-5 md:text-5xl h-[15%]">About me...</div>
-                <div className="grid grid-cols-1 h-[75%] gap-y-5 mt-10">
+            <div className={`text-gray-200 px-5 ${MinHeightViewMinusNav} ${HeightViewMinusNav} bg-gradient-to-br from-gray-700 to-gray-900 text-center overflow-y-scroll overflow-x-hidden md:overflow-hidden`}>
+                <div className="pt-5 text-2xl md:text-5xl md:h-[15%]">About me...</div>
+                <div className="md:hidden text-xs">[Tap to read more]</div>
+                <div className="grid grid-cols-1 md:h-[75%] gap-y-5 mt-10">
                     {traits.map((t) => (
                         <HoverText {...t} />
                     ))}
