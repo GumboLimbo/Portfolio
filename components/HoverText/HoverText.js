@@ -16,7 +16,9 @@ export default function HoverText({ title, innerText }) {
 
     return (
         <div className="grid grid-cols-1 grid-rows-1 group overflow-hidden">
-            <div onClick={handleClick} className={`flex justify-center items-center animate-pulse col-start-1 row-start-1 transition-all ${duration} ${isMobile ? (open ? 'translate-x-[-100%]' : '') : 'sm:group-hover:translate-x-[-100%]'} sm:text-4xl`}>{title}</div>
+            <div onClick={handleClick} className={`flex justify-center items-center animate-pulse col-start-1 row-start-1 transition-all ${duration} ${isMobile ? (open ? 'translate-x-[-100%]' : '') : 'sm:group-hover:translate-x-[-100%]'} text-xl sm:text-4xl`}>
+                {title}{isMobile && ' →'}
+            </div>
             <div onClick={handleClick} className={`flex justify-center items-center mx-[5%] col-start-1 row-start-1 transition-all ${duration} ${isMobile ? (open ? 'translate-x-0' : 'translate-x-[200%]') : 'sm:group-hover:translate-x-0 translate-x-[200%]'}`}>
                 {innerText}
             </div>
